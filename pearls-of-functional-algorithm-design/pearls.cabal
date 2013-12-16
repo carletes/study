@@ -1,0 +1,58 @@
+Name:                pearls
+Version:             0.1.0.0
+Synopsis:            Notes from Richard Bird's Pearls of Functional Algorithm Design
+Description:         Notes from Richard Bird's Pearls of Functional Algorithm Design
+License:             BSD3
+License-file:        LICENSE
+Author:              Carlos Valiente
+Maintainer:          carlos@pepelabs.net
+Category:            Learning
+Stability:           Experimental
+Build-type:          Simple
+Cabal-version:       >=1.10
+Tested-with:         GHC==7.6.3
+
+Source-repository    head
+  Type:              git
+  Location:          git@code.pepelabs.net:carlos/study.git
+
+Library
+  Hs-source-dirs:
+    src
+  Exposed-modules:
+    FreeNumber
+  Build-depends:
+    base == 4.*
+  Default-language:
+    Haskell2010
+  Ghc-options:
+    -Wall -O2
+
+Test-suite free-number-test
+  Type:
+    exitcode-stdio-1.0
+  Hs-source-dirs:
+    src,
+    tests
+  Main-is:
+    FreeNumberTest.hs
+  Build-depends:
+    base,
+    test-framework,
+    test-framework-quickcheck2
+  Ghc-options:
+    -Wall -O2
+
+Benchmark free-number-bench
+  Type:
+    exitcode-stdio-1.0
+  Hs-source-dirs:
+    src,
+    bench
+  Main-is:
+    FreeNumberBench.hs
+  Build-depends:
+    base,
+    criterion
+  Ghc-options:
+    -Wall -O2
