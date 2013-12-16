@@ -4,6 +4,11 @@ all: init
 check: all
 	cabal test
 
+doc: init
+	cabal haddock \
+		--all \
+		--hyperlink-source
+
 bench: all
 	cabal bench
 
@@ -13,6 +18,7 @@ init:
 		--only-dependencies \
 		--enable-tests \
 		--enable-benchmarks \
+		--enable-documentation \
 		--jobs
 	cabal configure \
 		--enable-tests \
