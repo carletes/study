@@ -18,8 +18,8 @@ minfree_ref xs = head ([0 ..] \\ xs) where
 
 -- | The smallest natural number is a non-negative integer.
 prop_minfree_nonnegative      :: ([Int] -> Int) -> [Int] -> Bool
-prop_minfree_nonnegative f xs = (f xs) >= 0
+prop_minfree_nonnegative f xs = f xs >= 0
 
 -- | The result is not in the given set
 prop_minfree_not_in_set      :: ([Int] -> Int) -> [Int] -> Bool
-prop_minfree_not_in_set f xs = (f xs) `notElem` xs
+prop_minfree_not_in_set f xs = f xs `notElem` xs
