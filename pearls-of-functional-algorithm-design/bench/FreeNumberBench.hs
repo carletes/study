@@ -9,9 +9,10 @@ import Criterion.Main (Benchmark, bench, nf, defaultMainWith)
 import FreeNumber
 
 benchmarks :: [Benchmark]
-benchmarks =
+benchmarks = let n = 10000 in
            [
-             bench "minfree_ref" $ nf minfree_ref [67 .. 100000]
+             bench "minfree_increasing" $ nf minfree_ref [0 .. n]
+           , bench "minfree_decreasing" $ nf minfree_ref [n, n-1 .. 0]
            ]
 
 config :: Config
