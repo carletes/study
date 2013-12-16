@@ -10,7 +10,7 @@ module FreeNumber
 
 -- | Returns the smallest natural number not present in the given set.
 --
---  This is the reference implementation.
+--  This is the reference implementation (/O(n^2)/).
 minfree_ref    :: [Int] -> Int
 minfree_ref xs = head ([0 ..] \\ xs) where
     (\\) :: Eq a=> [a] -> [a] -> [a]

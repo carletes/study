@@ -1,6 +1,6 @@
 -- | Benchmarks for the smallest free number tools.
 --
--- Copied from https://github.com/jstolarek/haskell-testing-stub
+-- Copied from <https://github.com/jstolarek/haskell-testing-stub>
 module Main where
 
 import Criterion.Config (Config(..), defaultConfig, ljust)
