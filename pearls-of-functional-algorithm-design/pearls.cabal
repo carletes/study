@@ -39,7 +39,10 @@ Test-suite free-number-test
   Build-depends:
     base,
     test-framework,
-    test-framework-quickcheck2
+    test-framework-quickcheck2,
+    pearls
+  Default-language:
+    Haskell2010
   Ghc-options:
     -Wall -O2
 
@@ -53,6 +56,9 @@ Benchmark free-number-bench
     FreeNumberBench.hs
   Build-depends:
     base,
-    criterion
+    criterion,
+    pearls
+  Default-language:
+    Haskell2010
   Ghc-options:
     -Wall -O2
